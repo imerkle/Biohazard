@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  url: ssh://git@github.com/JJGadgets/Biohazard
+  url: ssh://git@github.com/imerkle/Biohazard
   ref:
     branch: main
   secretRef:

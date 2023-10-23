@@ -16,3 +16,6 @@ Admins.txt
 GameUserSettings.ini
 *.sops.*.tmp
 *.code-workspace
+_secret*
+_vars*
+*.unenc*
