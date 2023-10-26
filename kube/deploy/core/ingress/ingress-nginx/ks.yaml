@@ -9,5 +9,4 @@ metadata:
 spec:
   path: ./kube/deploy/core/ingress/ingress-nginx/app
   dependsOn:
-    []
-  #   - name: 1-core-ingress-deps
+    - name: 1-core-tls-cert-manager-app
