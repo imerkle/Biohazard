@@ -19,3 +19,5 @@ GameUserSettings.ini
 _secret*
 _vars*
 *.unenc*
+secrets-age.yaml
+secrets-ssh.yaml
