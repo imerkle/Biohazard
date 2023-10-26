@@ -37,7 +37,8 @@ spec:
       config:
         enable-real-ip: "true"
         use-forwarded-headers: "true"
-        proxy-real-ip-cidr: ${IP_EC2_NON_K8S}/32, ${IP_POD_CIDR_V4}, 127.0.0.0/8
+        proxy-real-ip-cidr: ${IP_POD_CIDR_V4}, 127.0.0.0/8
+        #${IP_EC2_NON_K8S}/32,
         disable-access-log: "false"
         log-format-escape-json: "true"
         # hardening
