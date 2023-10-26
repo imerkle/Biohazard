@@ -33,7 +33,7 @@ spec:
       extraArgs:
         # default-ssl-certificate: ingress/short-domain-tls
         default-backend-service: ingress/default-backend
-      ingressClassByName: 
+      ingressClassByName: true
       defaultBackend:
         enabled: false      
       config:
