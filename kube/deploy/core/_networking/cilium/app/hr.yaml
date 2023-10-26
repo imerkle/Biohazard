@@ -49,7 +49,7 @@ spec:
     #     loadbalancerIP: true
     #     podCIDR: true
     bgpControlPlane:
-      enabled: true
+      enabled: false
         # `bgp.announce` block is moved to CiliumBGPPeeringPolicy used by bgpControlPlane, for more fine grained control over announced addresses
         # bgpControlPlane is newer GoBGP implementation, `bgp.enabled: true` and `bgp.announce` uses older MetalLB BGP implementation that is planned to be deprecated in Cilium v1.15.
     loadBalancer:

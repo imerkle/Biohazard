@@ -31,3 +31,4 @@ kubeProxyReplacementHealthzBindAddr: 0.0.0.0:10256
 rollOutCiliumPods: true
 operator:
   rollOutPods: true
+  replicas: 1
