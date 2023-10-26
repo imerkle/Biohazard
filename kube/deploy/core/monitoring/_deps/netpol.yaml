@@ -29,7 +29,7 @@ spec:
     # home network
     - fromCIDRSet:
         - cidr: "10.0.0.0/8"
-        # - cidr: "${IP_WG_USER_1_V4}"
+        #TODO: - cidr: "${IP_WG_USER_1_V4}"
     # from kubernetes
     - fromEntities:
         - kube-apiserver
