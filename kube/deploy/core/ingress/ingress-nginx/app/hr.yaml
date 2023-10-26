@@ -35,7 +35,7 @@ spec:
         default-backend-service: ingress/default-backend
       ingressClassByName: true
       config:
-        enable-real-ip: "true"
+        # enable-real-ip: "true"
         use-forwarded-headers: "true"
         # proxy-real-ip-cidr: ${IP_POD_CIDR_V4}, 127.0.0.0/8
         #${IP_EC2_NON_K8S}/32,
