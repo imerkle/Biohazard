@@ -20,7 +20,7 @@ spec:
       extraEnvs:
         - name: TZ
           value: ${CONFIG_TZ}
-      dnsPolicy: ClusterFirstWithHostNet
+      # dnsPolicy: ClusterFirstWithHostNet
       service:
         enabled: true
         type: LoadBalancer
