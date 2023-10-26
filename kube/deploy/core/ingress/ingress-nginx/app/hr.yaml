@@ -33,7 +33,9 @@ spec:
       extraArgs:
         # default-ssl-certificate: ingress/short-domain-tls
         default-backend-service: ingress/default-backend
-      ingressClassByName: true
+      ingressClassByName: 
+      defaultBackend:
+        enabled: false      
       config:
         # enable-real-ip: "true"
         use-forwarded-headers: "true"
