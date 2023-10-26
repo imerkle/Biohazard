@@ -56,17 +56,17 @@ spec:
       algorithm: maglev
       # mode: snat
       mode: dsr
-    nodePort:
-      enabled: true
-      range: 9993,32767
+    # nodePort:
+    #   enabled: true
+    #   range: 9993,32767
     bandwidthManager:
       enabled: true
       bbr: false # enable after Talos kernel updated to >= 5.18
     bpf:
       masquerade: true
-      tproxy: true
+      # tproxy: true
     enableIPv6BIGTCP: false # enable after Talos kernel updated to >= 5.19
-    l7Proxy: true
+    # l7Proxy: true
     
     # `kubectl get` and `kubectl describe` will reflect CiliumNetworkPolicy & CiliumEndpoints status (policy enforcement etc) with this enabled
     enableCnpStatusUpdates: true
