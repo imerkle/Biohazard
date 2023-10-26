@@ -37,3 +37,8 @@ l2announcements:
   leaseDuration: 120s
   leaseRenewDeadline: 60s
   leaseRetryPeriod: 1s
+endpointRoutes:
+  enabled: true
+containerRuntime:
+  integration: containerd
+  socketPath: /var/run/k3s/containerd/containerd.sock  
