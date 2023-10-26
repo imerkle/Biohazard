@@ -31,7 +31,7 @@ spec:
       publishService:
         enabled: true
       extraArgs:
-        default-ssl-certificate: ingress/short-domain-tls
+        # default-ssl-certificate: ingress/short-domain-tls
         default-backend-service: ingress/default-backend
       ingressClassByName: true
       config:
