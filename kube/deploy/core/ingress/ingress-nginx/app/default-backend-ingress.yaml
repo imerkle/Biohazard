@@ -3,7 +3,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: "default-error-page-${DNS_SHORT//./-}"
-  namespace: default
+  namespace: ingress
   annotations:
     external-dns.alpha.kubernetes.io/target: "${DNS_SHORT_CF}"
     external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
@@ -28,7 +28,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: "default-error-page-${DNS_MAIN//./-}"
-  namespace: default
+  namespace: ingress
   annotations:
     external-dns.alpha.kubernetes.io/target: "${DNS_MAIN_CF}"
     external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
