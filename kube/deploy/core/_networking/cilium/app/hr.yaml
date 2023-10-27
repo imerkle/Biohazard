@@ -70,9 +70,9 @@ spec:
     
     # `kubectl get` and `kubectl describe` will reflect CiliumNetworkPolicy & CiliumEndpoints status (policy enforcement etc) with this enabled
     enableCnpStatusUpdates: true
-    endpointStatus:
-      enabled: true
-      status: "policy"
+    # endpointStatus:
+    #   enabled: true
+    #   status: "policy"
 
     hubble:
       enabled: true
