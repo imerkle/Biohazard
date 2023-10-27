@@ -2,11 +2,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: 1-core-ingress-nginx-app
+  name: 1-core-ingress-deps
   namespace: flux-system
   labels:
     prune.flux.home.arpa/disabled: "true"
 spec:
-  path: ./kube/deploy/core/ingress/ingress-nginx/app
+  path: ./kube/deploy/core/ingress/_deps/app
   dependsOn:
-    - name: 1-core-ingress-deps
+    - name: 1-core-tls-cert-manager-crds
