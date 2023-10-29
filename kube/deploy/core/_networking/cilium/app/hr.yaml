@@ -35,14 +35,14 @@ spec:
     - kind: ConfigMap
       name: cilium-base-install-values
   values:
-    securityContext: # required for Talos
-      capabilities:
-        ciliumAgent: "{CHOWN,KILL,NET_ADMIN,NET_RAW,IPC_LOCK,SYS_ADMIN,SYS_RESOURCE,DAC_OVERRIDE,FOWNER,SETGID,SETUID}"
-        cleanCiliumState: "{NET_ADMIN,SYS_ADMIN,SYS_RESOURCE}"
-    cgroup:
-      autoMount:
-        enabled: false
-      hostRoot: "/sys/fs/cgroup"
+    # securityContext: # required for Talos
+    #   capabilities:
+    #     ciliumAgent: "{CHOWN,KILL,NET_ADMIN,NET_RAW,IPC_LOCK,SYS_ADMIN,SYS_RESOURCE,DAC_OVERRIDE,FOWNER,SETGID,SETUID}"
+    #     cleanCiliumState: "{NET_ADMIN,SYS_ADMIN,SYS_RESOURCE}"
+    # cgroup:
+    #   autoMount:
+    #     enabled: false
+    #   hostRoot: "/sys/fs/cgroup"
     # bgp:
     #   enabled: true
     #   announce:
@@ -59,20 +59,20 @@ spec:
     # nodePort:
     #   enabled: true
     #   range: 9993,32767
-    bandwidthManager:
-      enabled: true
-      bbr: false # enable after Talos kernel updated to >= 5.18
+    # bandwidthManager:
+    #   enabled: true
+    #   bbr: false # enable after Talos kernel updated to >= 5.18
     bpf:
       masquerade: true
       # tproxy: true
-    enableIPv6BIGTCP: false # enable after Talos kernel updated to >= 5.19
+    # enableIPv6BIGTCP: false # enable after Talos kernel updated to >= 5.19
     # l7Proxy: true
     
     # `kubectl get` and `kubectl describe` will reflect CiliumNetworkPolicy & CiliumEndpoints status (policy enforcement etc) with this enabled
     enableCnpStatusUpdates: true
-    endpointStatus:
-      enabled: true
-      status: "policy"
+    # endpointStatus:
+    #   enabled: true
+    #   status: "policy"
 
     hubble:
       enabled: true
