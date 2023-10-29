@@ -138,16 +138,16 @@ spec:
               matchLabels:
                 rook_object_store: "${CLUSTER_NAME}"
             namespace: rook-ceph
-      toPorts:
-        - ports:
-            - port: "6953"
-              protocol: TCP
-            - port: "6953"
-              protocol: UDP
-            - port: "8080"
-              protocol: TCP
-            - port: "8080"
-              protocol: UDP
+      # toPorts:
+      #   - ports:
+      #       - port: "6953"
+      #         protocol: TCP
+      #       - port: "6953"
+      #         protocol: UDP
+      #       - port: "8080"
+      #         protocol: TCP
+      #       - port: "8080"
+      #         protocol: UDP
     - toEndpoints:
         - matchLabels:
             rook_object_store: "${CLUSTER_NAME}"
