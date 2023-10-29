@@ -61,6 +61,7 @@ resources:
   # - ../../../deploy/apps/miniflux/
   # - ../../../deploy/apps/elk/
   # - ../../../deploy/apps/firefly/
+  - ../../../deploy/apps/hajimari/
   - ../../../deploy/apps/libreddit/
   # - ../../../deploy/apps/livestream/
   # - ../../../deploy/apps/livestream/oven

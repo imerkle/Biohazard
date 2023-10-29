@@ -3,7 +3,7 @@
 # apiVersion: cilium.io/v2
 # kind: CiliumNetworkPolicy
 # metadata:
-#   name: &app libreddit
+#   name: &app hajimari
 #   namespace: *app
 # spec:
 #   endpointSelector: {}
