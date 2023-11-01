@@ -1,0 +1,28 @@
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: block-storage
+  namespace: longhorn-system
+provisioner: driver.longhorn.io
+allowVolumeExpansion: true
+parameters:
+  numberOfReplicas: "1"
+  staleReplicaTimeout: "2880" # 48 hours in minutes
+  fromBackup: ""
+  fsType: "ext4"
+  #csi.storage.k8s.io/provisioner-secret-name: "longhorn-csi-provisioner"
+  #csi.storage.k8s.io/provisioner-secret-namespace: "storage"  
+#  recurringJobSelector: '[ { "name":"snapshot-6h", "isGroup":false }, { "name":"backup-daily", "isGroup":false } ]'
+# ---
+# kind: StorageClass
+# apiVersion: storage.k8s.io/v1
+# metadata:
+#   name: longhorn-xfs
+# provisioner: driver.longhorn.io
+# allowVolumeExpansion: true
+# parameters:
+#   numberOfReplicas: "3"
+#   staleReplicaTimeout: "2880" # 48 hours in minutes
+#   fromBackup: ""
+#   fsType: "xfs"
