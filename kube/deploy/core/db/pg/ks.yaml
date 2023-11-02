@@ -23,6 +23,7 @@ spec:
   path: ./kube/deploy/core/db/pg/clusters/default
   dependsOn:
     - name: 1-core-db-pg-app
+    - name: 1-core-storage-minio-app
   healthChecks:
     - name: pg-default
       namespace: pg

@@ -5,5 +5,5 @@ resources:
 - superuser.sops.yaml
 - netpol.yaml
 - cluster.yaml
-# - scheduledbackup.yaml
+- scheduledbackup.yaml
 # - dump-local.yaml
