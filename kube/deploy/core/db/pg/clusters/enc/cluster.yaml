@@ -10,11 +10,12 @@ spec:
   primaryUpdateStrategy: unsupervised # let k8s handle upgrades
   primaryUpdateMethod: restart # prefer downtime of image download from registry instead of switching primary instance (promote a standby instance to primary) when current primary pod is updated
   storage:
-    size: 100Gi
+    size: 50Gi
     storageClass: block
   walStorage:
-    size: 100Gi
-    storageClass: cnpg-wal-nfs
+    size: 50Gi
+    # storageClass: cnpg-wal-nfs
+    storageClass: block-storage
   superuserSecret:
     name: pg-enc-superuser
   postgresql:
@@ -23,22 +24,22 @@ spec:
       shared_buffers: "512MB" # amount of RAM to use for data caching, https://postgresqlco.nf/doc/en/param/shared_buffers/
   monitoring:
     enablePodMonitor: true
-  backup:
-    retentionPolicy: 30d
-    barmanObjectStore:
-      wal:
-        compression: bzip2
-        maxParallel: 8
-      destinationPath: "s3://${SECRET_PG_ENC_WAL_R2_BUCKET}/"
-      endpointURL: "${SECRET_R2_ENDPOINT}"
-      serverName: pg-enc-v1
-      s3Credentials:
-        accessKeyId:
-          name: pg-enc-r2
-          key: id
-        secretAccessKey:
-          name: pg-enc-r2
-          key: key
+  # backup:
+  #   retentionPolicy: 30d
+  #   barmanObjectStore:
+  #     wal:
+  #       compression: bzip2
+  #       maxParallel: 8
+  #     destinationPath: "s3://${SECRET_PG_ENC_WAL_R2_BUCKET}/"
+  #     endpointURL: "${SECRET_R2_ENDPOINT}"
+  #     serverName: pg-enc-v1
+  #     s3Credentials:
+  #       accessKeyId:
+  #         name: pg-enc-r2
+  #         key: id
+  #       secretAccessKey:
+  #         name: pg-enc-r2
+  #         key: key
 
 #  # RECOVERY
 #  bootstrap:

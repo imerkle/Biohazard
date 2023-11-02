@@ -21,3 +21,4 @@ _vars*
 *.unenc*
 secrets-age.yaml
 secrets-ssh.yaml
+.decrypted~*
