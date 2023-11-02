@@ -15,7 +15,7 @@ spec:
 
   ingress:
     annotations:
-      cert-manager.io/cluster-issuer: "${CLUSTER_CERT}"
+      # cert-manager.io/cluster-issuer: "${CLUSTER_CERT}"
       #kubernetes.io/ingress.class: haproxy
       #   cert-manager.io/cluster-issuer: letsencrypt-prod
       #   hajimari.io/appName: Vault
