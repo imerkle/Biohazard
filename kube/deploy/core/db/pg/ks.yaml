@@ -7,7 +7,7 @@ metadata:
 spec:
   path: ./kube/deploy/core/db/pg/app
   dependsOn:
-    - name: 1-core-storage-csi-driver-nfs-app
+    - name: 1-core-storage-longhorn-app
   healthChecks:
     - name: cloudnative-pg
       namespace: cnpg
