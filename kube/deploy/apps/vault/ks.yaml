@@ -20,8 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   path: ./kube/deploy/apps/vault/banzai-operator
-  dependsOn:
-    - name: cluster-apps-core
+  dependsOn: []
 ---
 # yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/kustomize.toolkit.fluxcd.io/kustomization_v1.json
 apiVersion: kustomize.toolkit.fluxcd.io/v1
