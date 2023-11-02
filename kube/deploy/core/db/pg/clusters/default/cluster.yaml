@@ -25,7 +25,7 @@ spec:
     barmanObjectStore:
       wal:
         compression: bzip2
-        maxParallel: 8s
+        # maxParallel: 8s
       destinationPath: s3://pg-default/
       endpointURL: http://minio-${CLUSTER_NAME}.minio.svc
       serverName: pg-default-v1
