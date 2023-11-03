@@ -29,7 +29,7 @@ resources:
   # - ../../../deploy/core/ingress/cloudflare/
   # - ../../../deploy/core/ingress/external-proxy-x/
   - ../../../deploy/core/db/pg/
-    - ../../../deploy/core/db/redis/
+  - ../../../deploy/core/db/redis/
   - ../../../deploy/core/monitoring/metrics-server/
   - ../../../deploy/core/monitoring/kube-state-metrics/
   # - ../../../deploy/core/monitoring/node-exporter/
