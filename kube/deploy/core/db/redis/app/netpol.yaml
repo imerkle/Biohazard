@@ -32,3 +32,6 @@ spec:
         - k8sService:
             serviceName: vault
             namespace: vault
+        - k8sService:
+            serviceName: vault-0
+            namespace: vault            
