@@ -270,6 +270,11 @@ spec:
             CLIENT_ID: 158145218919-jhrhormtqgo6rc311eqaaill9mnutp5v.apps.googleusercontent.com
             CLIENT_SECRET: v9Tb1cVEfjEXe6ReHjK_my_N
             SCOPES: "openid,profile,email"
+      - type: kv
+        path: secret/data/redis
+        data:
+          data:
+            PASSWORD: redispass
   vaultEnvsConfig:
     - name: VAULT_LOG_LEVEL
       value: debug
