@@ -29,8 +29,8 @@ spec:
       - -c
       - >-
         redis-server --requirepass $REDIS_PASSWORD
-    # podAnnotations:
-      # vault.security.banzaicloud.io/vault-addr: "http://vault.vault.svc.cluster.local:8200"
+    podAnnotations:
+      vault.security.banzaicloud.io/vault-addr: "http://vault.vault.svc.cluster.local:8200"
     env:
       REDIS_PORT: "6379"
       REDIS_PASSWORD: "vault:secret/data/redis#PASSWORD"
