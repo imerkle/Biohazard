@@ -28,10 +28,6 @@ spec:
       toPorts:
         - ports:
             - port: "6443"
-    - toServices:
-        - k8sService:
-            serviceName: vault
-            namespace: vault
-        - k8sService:
-            serviceName: vault-0
-            namespace: vault            
+    - toEndpoints:
+        - matchLabels:
+            io.kubernetes.pod.namespace: vault
