@@ -67,6 +67,7 @@ resources:
   - ../../../deploy/apps/vault/
   - ../../../deploy/apps/hajimari/
   - ../../../deploy/apps/libreddit/
+  - ../../../deploy/apps/immich/
   # - ../../../deploy/apps/livestream/
   # - ../../../deploy/apps/livestream/oven
   # - ../../../deploy/apps/soft-serve/
